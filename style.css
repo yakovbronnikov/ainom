@@ -160,7 +160,8 @@ h2 {
 }
 
 .credit .section-image,
-.time .section-image {
+.time .section-image,
+.discount .section-image  {
     order: -1;
 }
 
@@ -368,7 +369,8 @@ h2 {
     }
 
     .credit .section-image,
-    .time .section-image {
+    .time .section-image,
+    .discount .section-image {
         order: 0;
     }
 
