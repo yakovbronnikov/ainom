@@ -30,8 +30,15 @@ self.addEventListener('install', (event) => {
                 'time-price/index.html',
                 'time-price/style.css',
                 'time-price/script.js',
-                'assets/start.ogg',
-                'assets/timer.ogg'
+                'assets/delete.svg',
+                'assets/dribbble.webp',
+                'assets/github.webp',
+                'assets/instagram.webp',
+                'assets/hero-center.jpg',
+                'assets/hero-left.jpg',
+                'assets/hero-right.jpg',
+                'assets/list-item.svg',
+                'assets/offline.svg',
             ]))
             .then(() => self.skipWaiting())
     );
