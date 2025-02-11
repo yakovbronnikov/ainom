@@ -8,6 +8,7 @@ self.addEventListener('install', (event) => {
                 'index.html',
                 'main.css',
                 'main.js',
+                'script.js',
                 'credit-calculator/index.html',
                 'credit-calculator/style.css',
                 'credit-calculator/script.js',
