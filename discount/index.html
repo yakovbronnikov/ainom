@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AINOM - Time price calculator</title>
+    <title>AINOM - Discount calculator</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="style.css">
@@ -34,44 +34,23 @@
             <a href="../deposit-calculator/">Deposit</a>
             <a href="../credit-calculator/">Credit</a>
             <a href="../payback-period/">Payback</a>
-            <a href="#">Time</a>
+            <a href="../time-price/">Time</a>
             <a href="../kilogram/">Kilogram</a>
+            <a href="#">Discount</a>
         </div>
     </div>
 
     <div class="general appearance">
         <div class="form-wrapper">
             <div class="input-group">
-                
-                <div class="input-combined">
 
-                    <label class="input-label" for="salary">
-                        Salary
-                        <span>$</span>
-                        <input type="number" id="salary" value="50000" onchange="calcData()">
+                <div class="input-combined">
+                    <label class="input-label" for="price">
+                        Price
+                        <input type="number" id="price" placeholder="Cost of a pack" value="1000">
                     </label>
 
-                    <select name="" id="salary-schedule" onchange="calcData()">
-                        <option value="month">Per month</option>
-                        <option value="year">Per year</option>
-                        <option value="day">Per day</option>
-                        <option value="hour">Per hour</option>
-                    </select>
-
-                </div>
-
-                <label class="input-label" for="work-schedule">
-                    Schedule
-                    <select id="work-schedule" onchange="calcData()">
-                        <option value="247">5 / 2</option>
-                        <option value="183">2 / 2</option>
-                        <option value="183">3 / 3</option>
-                    </select>
-                </label>
-
-                <label class="input-label" for="work-schedule">
-                    Currency
-                    <select name="" id="country" onchange="cnangeCountry(), calcData()">
+                    <select name="" id="country" onchange="cnangeCountry()">
                         <option value="AZ">AZN</option>
                         <option value="CN">CNY</option>
                         <option value="EU">EUR</option>
@@ -88,62 +67,34 @@
                         <option value="TR">TRY</option>
                         <option value="US" selected>USD</option>
                     </select>
-                </label>
+                </div>
 
-                <label class="input-label" for="hours">
-                    Working hours
-                    <input type="number" id="hours" value="8" readonly>
-                    <button class="button" onclick="hoursChange('-')">-</button>
-                    <button class="button" onclick="hoursChange('+')">+</button>
+                <label class="input-label" for="discount">
+                    Discount
+                    <input type="number" id="discount" placeholder="Discount percent" value="15">
+                    <span>%</span>
                 </label>
-
             </div>
 
-            <button id="calculate" onclick="calcData()" class="button">Calculate</button>
+            <button id="calculate" class="button">Calculate</button>
         </div>
 
         <div class="result-wrapper">
-
             <div class="result">
-                <span>Minute</span>
-                <p id="result-minute"></p>
-                <div class="skeleton-result"></div>
+                <span>Benefit</span>
+                <p id="result-benefit"></p>
+                <div class="benefit-skeleton skeleton-result"></div>
             </div>
 
             <div class="result">
-                <span>Hour</span>
-                <p id="result-hour"></p>
-                <div class="skeleton-result"></div>
+                <span>Price with discount</span>
+                <p id="result-price"></p>
+                <div class="price-skeleton skeleton-result"></div>
             </div>
-
-            <div class="result">
-                <span>Day</span>
-                <p id="result-day"></p>
-                <div class="skeleton-result"></div>
-            </div>
-
-            <div class="result">
-                <span>Week</span>
-                <p id="result-week"></p>
-                <div class="skeleton-result"></div>
-            </div>
-
-            <div class="result">
-                <span>Month</span>
-                <p id="result-month"></p>
-                <div class="skeleton-result"></div>
-            </div>
-
-            <div class="result">
-                <span>Year</span>
-                <p id="result-year"></p>
-                <div class="skeleton-result"></div>
-            </div>
-
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer appearance">
         <a href="../" class="logo">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
